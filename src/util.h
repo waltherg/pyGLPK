@@ -22,6 +22,7 @@ along with PyGLPK.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <Python.h>
 #include "glpk.h"
+#include "glplpx.h"
 
 #if PY_MAJOR_VERSION == 2
 #if PY_MINOR_VERSION < 5

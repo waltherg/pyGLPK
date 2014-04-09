@@ -22,6 +22,7 @@ along with PyGLPK.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <Python.h>
 #include "glpk.h"
+#include "glplpx.h"
 
 #define ENVIRONMENT_INSTANCE_NAME "env"
 
