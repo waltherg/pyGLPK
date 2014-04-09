@@ -1,8 +1,22 @@
-2013-03-15: danielhyduke@gmail.com: setup.py was modified to build without compile errors on 64-bit GNU/Linux systems.
- 
+*2014-04-09: Georg Walther (contact@georg.io)*
+
+This Python module was developed by Thomas Finley for GLPK <= 4.47 which was the latest version of GLPK back in 2008.
+Starting around version 4.48 / 4.49, the author of GLPK deprecated method and macro names that started with lpx_.
+While the author provided a header file for compatibility `glpklpx.h` initially (this header file can be found in 4.49), this header file seems to have been removed in later releases.
+Another point of incompatibility between Finley's pyGLPK and more recent versions of GLPK is the, by now, deprecated definition of a C struct called `glp_long`.
+
+In this release I added the header `glpklpx.h` and redefined `glp_long` just to pacify PyGLPK.
+
+As of this writing, I have GLPK 4.54 installed.
+
+With these changes I can do `import glpk` without complaints.
+Further, `cobra.test.test_all()` runs without failure.
+
+*2013-03-15: danielhyduke@gmail.com: setup.py was modified to build without compile errors on 64-bit GNU/Linux systems.*
+
                                  PyGLPK Readme
 
-   Copyright (c) 2007, 2008, Thomas W. Finley
+   *Copyright (c) 2007, 2008, Thomas W. Finley*
 
 Overview
 
