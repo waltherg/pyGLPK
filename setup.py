@@ -50,8 +50,8 @@ else:
 # Perhaps set your libdir manually in case neither system defaults,
 # nor the cleverness does not work.
 
-#libs = ['glpk.something']
-#libdirs = ['/my/dirs/are/here/lib']
+libs = ['glpk']
+libdirs = ['/usr/lib64']
 #incdirs = ['/my/dirs/are/here/include']
 
 # If the user did not define libraries themselves, set that up.  We
