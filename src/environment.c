@@ -71,11 +71,8 @@ static PyObject* Environment_getblocks_peak(EnvironmentObject *self,
   return PyInt_FromLong(cpeak);
 }
 
-#if GLPK_VERSION(4,28)
+typedef struct { int lo, hi; } glp_long;
 #define GLP_LONG glp_long
-#else
-#define GLP_LONG glp_ulong
-#endif
 
 static PyObject* long2py(GLP_LONG l) {
   if ((l.hi==0 && l.lo>=0) || (l.hi==-1 && l.lo<0))
